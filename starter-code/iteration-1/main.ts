@@ -8,14 +8,13 @@ function addTask (task:string){
     testArray.push(task);
     number++;
     console.log (task+"was added");
-} 
+}
 
 // 3. Create a function to list all tasks, it must show in the console de task.
-function listAllTasks (task:string){
-    for (var i=0;i<testArray.length;i++) {
-        console.log (testArray[i]);
-    }
-}
+let listAllTasks = function (): void {
+   this.tasks.forEach((task, index) => { console.log(task); });
+ }
+
 // 4. Create a function to delete a task, you must find the task inside the array and delete it.
 function deleteTask(task:string){
    var index= testArray.indexOf(task,0);

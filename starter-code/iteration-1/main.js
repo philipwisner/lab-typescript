@@ -5,11 +5,9 @@ function addTask(task) {
     number++;
     console.log(task + "was added");
 }
-function listAllTasks(task) {
-    for (var i = 0; i < testArray.length; i++) {
-        console.log(testArray[i]);
-    }
-}
+let listAllTasks = function () {
+    this.tasks.forEach((task, index) => { console.log(task); });
+};
 function deleteTask(task) {
     var index = testArray.indexOf(task, 0);
     if (index > -1) {

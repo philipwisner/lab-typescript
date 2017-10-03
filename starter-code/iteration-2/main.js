@@ -8,11 +8,9 @@ class Todo {
         return number;
         console.log(task + "was added");
     }
-    listAllTasks(task) {
-        for (var i = 0; i < this.testArray.length; i++) {
-            console.log(testArray[i]);
-        }
-    }
+    listAllTasks(): void {
+        this.todoList.forEach((task) => { console.log(task); })
+      }
     deleteTask(task) {
         var index = this.testArray.indexOf(task, 0);
         if (index > -1) {
